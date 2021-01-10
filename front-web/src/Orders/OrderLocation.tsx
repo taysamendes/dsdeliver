@@ -22,7 +22,7 @@ type Props = {
     onChangeLocation: (location: OrderLocationData) => void;
 }
 
-function OrderLocation({onChangeLocation}:Props) {
+function OrderLocation({ onChangeLocation }: Props) {
 
     const [address, setAddress] = useState<Place>({
         position: initialPosition
@@ -70,11 +70,11 @@ function OrderLocation({onChangeLocation}:Props) {
                     />
                 </div>
 
-                <MapContainer 
-                center={address.position} 
-                zoom={15} 
-                scrollWheelZoom
-                key={address.position.lat}
+                <MapContainer
+                    center={address.position}
+                    zoom={15}
+                    scrollWheelZoom
+                    key={address.position.lat}
                 >
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
